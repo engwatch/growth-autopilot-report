@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Growth Autopilot - Схемы</title><link rel="stylesheet" href="style.css"></head><body>
+<nav>
+  <span class="logo">Growth Autopilot</span>
+  <a href="index.html">Обзор</a>
+  <a href="platforms.html">Платформы</a>
+  <a href="schemes.html" class="active">Схемы</a>
+  <a href="tools.html">Инструменты</a>
+  <a href="pipeline.html">Пайплайн</a>
+  <a href="roadmap.html">Roadmap</a>
+</nav>
+<div class="container">
+
+<h1>Конкретные схемы автоматизации</h1>
+<p class="subtitle">Пошаговые инструкции: инструмент → действие → результат</p>
+
+<!-- SCHEME 1: Reply Guy Threads -->
+<h2>1. Reply Guy на Threads</h2>
+<div class="info">Язык: <span class="lang-ru">RU</span> | Цель: подписчики Threads → трафик в TG @danielspe_chanel</div>
+
+<div class="scheme">
+<span class="badge">Пошаговая схема</span>
+<pre>
+ЭТАП 1: МОНИТОРИНГ (ежедневно, 10 мин)
+
+  Инструмент: Playwright MCP (browser_navigate + browser_snapshot)
+  Действие: открыть threads.net → For You → фильтр по нише AI/Product/Tech
+  Критерий: пост набрал 50+ лайков за &lt; 2 часов = "залетевший"
+  Результат: список 3-5 постов для комментирования
+
+ЭТАП 2: АНАЛИЗ ПОСТА (Claude Code, 2 мин на пост)
+
+  Инструмент: Playwright → browser_snapshot → Claude анализирует текст
+  Действие: извлечь ключевую тему, тезис, спорный момент
+  Результат: черновик комментария (200-400 символов)
+
+ЭТАП 3: НАПИСАНИЕ КОММЕНТАРИЯ (формула)
+
+  ЯКОРЬ:  "Кстати, про [конкретный пункт из поста] -"
+  ЦЕННОСТЬ: "У нас в InsurTech похожая задача, мы решили через [кейс с цифрами]"
+  КРЮЧОК: "Подробнее с кодом описал у себя в профиле"
+  Длина: 150-300 символов, разговорный тон, на русском
+
+ЭТАП 4: ПУБЛИКАЦИЯ (Playwright, 1 мин)
+
+  Инструмент: Playwright MCP → browser_click → browser_type
+  Задержка: 3-5 сек между действиями (human-like)
+  Проверка: browser_snapshot → убедиться что коммент опубликован
+
+ЭТАП 5: РЕЗУЛЬТАТ
+
+  Люди видят коммент → заходят в профиль → видят посты на RU
+  В bio: "Автоматизирую бизнес AI-агентами. Кейсы → @danielspe_chanel"
+  Конверсия: ~2-5% читателей комментария → подписчик TG
+</pre>
+</div>
+
+<div class="card-grid">
+  <div class="metric green"><div class="num">30-45 мин/день</div><div class="label">Время на Threads Reply Guy</div></div>
+  <div class="metric"><div class="num">5-10K токенов</div><div class="label">За сессию (Playwright MCP)</div></div>
+  <div class="metric orange"><div class="num">+10-20/день</div><div class="label">Новых подписчиков Threads</div></div>
+  <div class="metric purple"><div class="num">+2-5/день</div><div class="label">Новых подписчиков TG</div></div>
+</div>
+
+<div class="warn">
+<strong>Важно:</strong> Threads API поддерживает ТОЛЬКО публикацию своих постов. Для комментирования чужих постов нужен Playwright. Комментарии должны быть человечными - никаких шаблонов.
+</div>
+
+<!-- SCHEME 2: 70/30 Reply Machine X -->
+<h2>2. 70/30 Reply Machine на X</h2>
+<div class="info">Язык: <span class="lang-ru">RU</span> (посты/треды) + язык оригинала (replies) | Цель: подписчики X → TG</div>
+
+<div class="scheme">
+<span class="badge">Пошаговая схема</span>
+<pre>
+УТРЕННИЙ ЦИКЛ (8:00-9:00, 60 мин)
+
+  1. МОНИТОРИНГ ТРЕНДОВ (15 мин)
+     Инструмент: Talkwalker Alerts → email с трендами за ночь
+     Инструмент: hnrss.org RSS → посты > 50 очков по AI/automation
+     Инструмент: Playwright → X поиск "AI agent" OR "AI automation" → Top
+     Результат: 5-10 трендовых постов для ответов
+
+  2. ГЕНЕРАЦИЯ REPLIES (20 мин, Claude Code)
+     Инструмент: Claude Opus анализирует каждый пост
+     Формула reply:
+       [Согласие/уточнение конкретного пункта]
+       [Свой опыт с цифрами: "Мы сэкономили X$ делая Y"]
+       [Вопрос автору ИЛИ крючок: "описал кейс в треде"]
+     Результат: 10 черновиков replies (150-250 символов)
+
+  3. ПУБЛИКАЦИЯ REPLIES (15 мин, Playwright MCP)
+     Инструмент: Playwright → последовательно, 1 reply за раз
+     Задержка: 30-90 сек между replies (рандом)
+     Проверка: screenshot после каждого reply
+
+  4. СВОЙ КОНТЕНТ (10 мин)
+     Инструмент: X API (curl) - публикация 1-2 постов на русском
+     Формат: hook (250 символов) + CTA → "Больше → @danielspe_chanel"
+     2 раза/неделю: тред (7 твитов) вместо одиночного поста
+</pre>
+</div>
+
+<div class="card">
+<h4>Алгоритм Grok: точные веса</h4>
+<table>
+<tr><th>Действие</th><th>Вес</th><th>Относительная ценность</th></tr>
+<tr><td>Conversation (ответ + reply)</td><td style="color:var(--green);font-weight:700">+75</td><td>150x лайка</td></tr>
+<tr><td>Reply</td><td>+13.5</td><td>27x лайка</td></tr>
+<tr><td>Bookmark</td><td>+10</td><td>20x лайка</td></tr>
+<tr><td>Retweet</td><td>+1</td><td>2x лайка</td></tr>
+<tr><td>Like</td><td>+0.5</td><td>базовый</td></tr>
+<tr><td style="color:var(--red)">Report/Block</td><td style="color:var(--red)">-740</td><td>УБИВАЕТ пост</td></tr>
+</table>
+<p><strong>Вывод:</strong> Conversation = 150x ценнее лайка. Весь фокус - провоцирование дискуссий.</p>
+</div>
+
+<div class="card-grid">
+  <div class="metric green"><div class="num">60 мин/день</div><div class="label">30 мин Claude + 30 мин Playwright</div></div>
+  <div class="metric"><div class="num">8-15K токенов</div><div class="label">За утренний цикл</div></div>
+  <div class="metric orange"><div class="num">+15-30/день</div><div class="label">Новых подписчиков X</div></div>
+  <div class="metric purple"><div class="num">+3-5/день</div><div class="label">Новых подписчиков TG</div></div>
+</div>
+
+<!-- SCHEME 3: First Responder -->
+<h2>3. First Responder (мониторинг трендов)</h2>
+<div class="info">Все платформы | Цель: быть в первых 3-5 комментариях на трендовых постах</div>
+
+<div class="scheme">
+<span class="badge">Пошаговая схема</span>
+<pre>
+НАСТРОЙКА (одноразово, 30 мин)
+
+  1. Talkwalker Alerts (talkwalker.com/alerts)
+     Создать 5-8 алертов: "AI agent", "AI automation", "Claude API",
+     "product management AI", "finance automation", "InsurTech AI"
+     Частота: as-it-happens (реальное время)
+     Доставка: email → logvas7@gmail.com
+
+  2. hnrss.org (RSS для Hacker News)
+     https://hnrss.org/newest?q=AI+agent&amp;points=50
+     https://hnrss.org/newest?q=automation+business&amp;points=30
+     Добавить в Feedly (бесплатный)
+
+  3. Reddit RSS
+     reddit.com/r/artificial/.rss
+     reddit.com/r/MachineLearning/.rss
+     reddit.com/r/productmanagement/.rss
+     Добавить в Feedly
+
+ЕЖЕДНЕВНЫЙ ЦИКЛ (утро, 30 мин)
+
+  1. ПРОВЕРКА АЛЕРТОВ (5 мин)
+     Инструмент: Gmail MCP → поиск from:talkwalker.com за 12 часов
+     Результат: 5-10 трендовых постов/статей
+
+  2. АНАЛИЗ И РАНЖИРОВАНИЕ (5 мин)
+     Инструмент: Claude Code → WebFetch каждого URL
+     Критерий: >100 лайков/upvotes, &lt;3 часов, наша ниша
+     Результат: топ-3 поста для комментирования
+
+  3. ГЕНЕРАЦИЯ КОММЕНТАРИЕВ (10 мин)
+     Инструмент: Claude Opus → анализ + генерация
+     Формула: ЯКОРЬ + ЦЕННОСТЬ + КРЮЧОК (150-300 символов)
+     Язык: X/Threads → RU, HN/Reddit → EN
+
+  4. ПУБЛИКАЦИЯ (10 мин)
+     HN/Reddit: Playwright MCP → последовательно
+     X: API (reply) или Playwright
+     Threads: Playwright
+     Задержка: 2-5 мин между платформами
+</pre>
+</div>
+
+<div class="card-grid">
+  <div class="metric green"><div class="num">30 мин/день</div><div class="label">Весь цикл First Responder</div></div>
+  <div class="metric"><div class="num">5-8K токенов</div><div class="label">За сессию</div></div>
+  <div class="metric orange"><div class="num">0 руб</div><div class="label">Talkwalker + hnrss + Feedly бесплатны</div></div>
+  <div class="metric purple"><div class="num">50-500 просмотров</div><div class="label">Профиля за 1 ранний коммент</div></div>
+</div>
+
+<!-- SCHEME 4: VC.ru → TG -->
+<h2>4. Воронка VC.ru → Telegram</h2>
+<div class="info">Язык: <span class="lang-ru">RU</span> | Главный бесплатный драйвер подписчиков TG</div>
+
+<div class="scheme">
+<span class="badge">Пошаговая схема</span>
+<pre>
+ПОДГОТОВКА СТАТЬИ ДЛЯ VC.ru
+
+  1. Статья (2000+ слов, русский)
+     Инструмент: Claude Code → перевод/адаптация pillar article
+     Вставить 2-3 нативные ссылки на TG:
+       После инсайта: "Подробнее разбираю в канале @danielspe_chanel"
+       В середине: "Исходный код выложил в канале @danielspe_chanel"
+       В конце: CTA "Больше кейсов AI-автоматизации → t.me/danielspe_chanel"
+     НЕ делать: спамные CTA, >3 ссылок (минусы от читателей)
+
+  2. Публикация (Playwright MCP, ~5K токенов)
+     Подзаголовок с интригой
+     Обложка: 1920x1080, тёмная с цифрами
+     Категория: AI или Стартапы (больше охват)
+
+  3. Разгон (первые 2 часа)
+     Threads (RU): "Написал подробный кейс на VC.ru → [ссылка]"
+     X (RU): тред-тизер с ключевыми цифрами + ссылка
+     TG-канал: "Новая статья на VC → [ссылка]"
+     Если > 10 плюсов в первый час → алгоритм буст → "Популярное"
+
+  4. Результат
+     "Популярное" VC.ru = 5K-50K просмотров
+     Конверсия в TG: 0.5-2% от просмотров
+     Ожидание: 25-200 подписчиков TG с одной статьи
+</pre>
+</div>
+
+<!-- SCHEME 5: Publishing Pipeline -->
+<h2>5. Публикация одной статьи (3 дня)</h2>
+<div class="info">1 статья → 14+ площадок в 4 языках | Подробнее: <a href="pipeline.html">Пайплайн</a></div>
+
+<div class="scheme">
+<span class="badge">Пошаговая схема</span>
+<pre>
+ДЕНЬ 1: EN Original (30 мин, ~5K токенов)
+
+  Claude Code: адаптировать markdown → формат каждой платформы
+  API (параллельно, 5 мин):
+    Dev.to EN     → curl POST (canonical → Medium)
+    Hashnode EN   → curl GraphQL
+    Bluesky EN    → atproto SDK
+    Mastodon EN   → curl POST
+  Playwright (последовательно, 25 мин):
+    Medium EN     → canonical URL source
+    LinkedIn EN   → пост + ссылка
+    Substack EN   → newsletter
+
+ДЕНЬ 2: RU + Соцсети (25 мин, ~4K токенов)
+
+  Claude Code: перевод → RU + генерация соцсетей постов
+  API (5 мин):
+    Telegram RU   → MCP send_message
+    X тред RU     → X API (7 твитов)
+    Threads RU    → Meta API (пост)
+  Playwright (последовательно, 20 мин):
+    VC.ru RU      → Editor.js
+    Хабр RU       → markdown
+    Medium RU     → перевод
+
+ДЕНЬ 3: ES/PT (15 мин, ~3K токенов)
+
+  API (параллельно, 5 мин):
+    Dev.to ES/PT  → curl POST
+    TabNews PT    → curl POST
+  Playwright (10 мин):
+    Medium ES/PT  → Playwright
+
+ИТОГО: ~12K токенов за 3 дня (вместо ~50K+ при чистом Playwright)
+</pre>
+</div>
+
+<!-- SCHEME 6: Comment Formula -->
+<h2>6. Универсальная формула комментария</h2>
+
+<div class="card">
+<pre>
+ЯКОРЬ:   "Отличный пункт про [конкретная часть поста]."
+ЦЕННОСТЬ: "В моём опыте, [свой инсайт/данные/кейс]."
+КРЮЧОК:  "Описал похожий кейс [у себя / в треде / в TG]"
+</pre>
+
+<h4>Примеры по платформам:</h4>
+
+<p><strong>Threads (RU):</strong><br>
+"Точно! Мы тоже автоматизировали отчётность AI-агентами - за 2 месяца заменили 3 человека. Самое сложное было не технология, а доверие команды. Подробнее у меня в профиле"</p>
+
+<p><strong>X (RU):</strong><br>
+"У нас похожий кейс в InsurTech - 17 AI-скиллов вместо финотдела. Экономия $15K/мес. Главный инсайт: начинать не с самого сложного, а с того что больнее всего. Тред с деталями →"</p>
+
+<p><strong>LinkedIn (EN):</strong><br>
+"Great point about AI replacing processes, not people. We went through exactly this - automated financial reporting with AI agents, saved $15K/month. The key was starting with the most painful task, not the easiest one. Happy to share the full breakdown."</p>
+
+<p><strong>HN/Reddit (EN):</strong><br>
+"Built something similar for InsurTech reporting. 17 Claude Code skills replaced manual reconciliation across 200+ partners. Main gotcha: the API rate limits were the real bottleneck, not the AI quality."</p>
+</div>
+
+<h2>Формула X тредов (7 твитов)</h2>
+
+<div class="card">
+<pre>
+Твит 1: HOOK (80% успеха - bold statement + tension)
+        "Я заменил финотдел AI-агентом за 2 месяца. Вот что я узнал →"
+
+Твит 2-3: CONTEXT (зачем это важно)
+        "200+ партнёров, 3 человека на отчётности, каждый месяц одни и те же ошибки..."
+
+Твит 4-6: VALUE (1 идея = 1 твит, &lt; 250 символов)
+        "Шаг 1: Автоматизировал сбор данных из БД (экономия: 40 часов/мес)"
+
+Твит 7: CTA
+        "Если хочешь повторить - полный гайд с кодом у меня в канале.
+         RT если полезно"
+</pre>
+</div>
+
+</div>
+</body></html>

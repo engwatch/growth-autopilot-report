@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Growth Autopilot - Пайплайн</title><link rel="stylesheet" href="style.css"></head><body>
+<nav>
+  <span class="logo">Growth Autopilot</span>
+  <a href="index.html">Обзор</a>
+  <a href="platforms.html">Платформы</a>
+  <a href="schemes.html">Схемы</a>
+  <a href="tools.html">Инструменты</a>
+  <a href="pipeline.html" class="active">Пайплайн</a>
+  <a href="roadmap.html">Roadmap</a>
+</nav>
+<div class="container">
+
+<h1>Токен-эффективный пайплайн</h1>
+<p class="subtitle">API-first подход: 12K токенов вместо 50K+ за полный цикл публикации</p>
+
+<h2>Приоритет методов (от дешёвого к дорогому)</h2>
+
+<div class="card">
+<h3 style="color:var(--green)">Приоритет 1: REST API - ~500 токенов/платформа</h3>
+<table>
+<tr><th>Платформа</th><th>Команда</th></tr>
+<tr><td>Dev.to</td><td><code>POST /api/articles</code> (API key в header)</td></tr>
+<tr><td>Hashnode</td><td><code>POST GraphQL mutation</code> (PAT token)</td></tr>
+<tr><td>TabNews</td><td><code>POST /api/v1/contents</code> (session token)</td></tr>
+<tr><td>Telegram</td><td>MCP send_message (бесплатно)</td></tr>
+<tr><td>X</td><td><code>POST /2/tweets</code> (Free tier, 1500/мес)</td></tr>
+<tr><td>Bluesky</td><td>AT Protocol SDK (полный CRUD)</td></tr>
+<tr><td>Mastodon</td><td><code>POST /api/v1/statuses</code></td></tr>
+</table>
+
+<h3 style="color:var(--accent)">Приоритет 2: MCP-серверы - ~1-2K токенов/платформа</h3>
+<table>
+<tr><th>MCP</th><th>Что делает</th></tr>
+<tr><td>mcp-twikit</td><td>X без API ключа (неофициальный)</td></tr>
+<tr><td>mcp-reddit</td><td>Чтение + комментарии</td></tr>
+<tr><td>mcp-linkedin</td><td>Постинг</td></tr>
+</table>
+
+<h3 style="color:var(--orange)">Приоритет 3: Playwright MCP - ~3-8K токенов/платформа</h3>
+<table>
+<tr><th>Платформа</th><th>Причина</th></tr>
+<tr><td>Medium</td><td>API deprecated с 2017. contenteditable editor</td></tr>
+<tr><td>Substack</td><td>Reverse-eng API + Playwright fallback</td></tr>
+<tr><td>LinkedIn</td><td>Нет бесплатного API для личных постов</td></tr>
+<tr><td>VC.ru</td><td>Editor.js (блочный редактор)</td></tr>
+<tr><td>Хабр</td><td>Нет API</td></tr>
+<tr><td>Threads (комменты)</td><td>API не поддерживает комментирование</td></tr>
+</table>
+
+<h3 style="color:var(--purple)">Приоритет 4: Postiz (self-hosted) - 0 токенов</h3>
+<p>Docker контейнер → веб-интерфейс → 28+ платформ → расписание → AI из коробки.</p>
+</div>
+
+<h2>Автопилотный цикл (ежедневный)</h2>
+
+<div class="scheme">
+<span class="badge">Ночной автопилот</span>
+<pre>
+1. МОНИТОРИНГ (20 мин)
+   ├── Проверка Talkwalker alerts
+   ├── Проверка hnrss.org (посты > 50 очков)
+   ├── Проверка Reddit RSS (горячие посты)
+   ├── Сбор трендовых тем
+   └── Генерация черновиков комментариев
+
+2. КОНТЕНТ (40 мин)
+   ├── Адаптация pillar-статьи под каждую платформу
+   ├── Генерация X тредов и твитов (RU)
+   ├── Генерация Threads постов (RU)
+   ├── Генерация LinkedIn постов (EN)
+   ├── Генерация TG поста (RU)
+   └── Подготовка Substack Notes
+
+3. ПУБЛИКАЦИЯ - API (15 мин, параллельно)
+   ├── Dev.to, Hashnode → curl
+   ├── Threads, X, Bluesky, Mastodon → API
+   ├── Telegram → MCP
+   └── GitHub Gists → API
+
+4. ПУБЛИКАЦИЯ - Playwright (30 мин, ПОСЛЕДОВАТЕЛЬНО)
+   ├── LinkedIn → пост
+   ├── Substack → Notes + Newsletter
+   ├── VC.ru → статья
+   └── Хабр → статья
+
+5. ENGAGEMENT - Playwright (20 мин, ОСТОРОЖНО)
+   ├── LinkedIn: 5 комментариев
+   ├── X: 10 replies
+   ├── Medium: 10-20 claps
+   └── Reddit: 2-3 комментария (опционально)
+
+6. АНАЛИТИКА (10 мин)
+   ├── Сбор метрик
+   ├── Обновление дашборда
+   └── Рекомендации
+
+Общее время: ~2-2.5 часа
+Частота: ежедневно
+</pre>
+</div>
+
+<h2>Лимиты безопасности</h2>
+
+<div class="overflow-x">
+<table>
+<tr><th>Платформа</th><th>Посты/день</th><th>Комменты/день</th><th>Лайки/день</th><th>Подписки/день</th></tr>
+<tr><td>Threads</td><td>5-10</td><td>10-20</td><td>30-50</td><td>10-20</td></tr>
+<tr><td>X (API)</td><td>16 (500/мес)</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>X (Playwright)</td><td>-</td><td>15-20</td><td>30-50</td><td>5-10</td></tr>
+<tr><td>LinkedIn</td><td>1-2</td><td>5-10</td><td>20-30</td><td>5-10</td></tr>
+<tr><td>Dev.to</td><td>1-2</td><td>5-10</td><td>10-20</td><td>-</td></tr>
+<tr><td>Medium</td><td>1</td><td>5-10</td><td>30-50 claps</td><td>5-10</td></tr>
+<tr><td>Substack</td><td>1 + 5 Notes</td><td>5-10</td><td>-</td><td>-</td></tr>
+<tr><td>Reddit</td><td>1-2</td><td>3-5</td><td>10-20</td><td>-</td></tr>
+<tr><td>Telegram</td><td>3-5</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Bluesky</td><td>5-10</td><td>10-20</td><td>30-50</td><td>10-20</td></tr>
+<tr><td>HN</td><td>0</td><td>3-5</td><td>5-10</td><td>-</td></tr>
+</table>
+</div>
+
+<h2>Правила безопасности</h2>
+
+<div class="card">
+<ol>
+<li><strong>Playwright задачи - ТОЛЬКО последовательно</strong>, никогда не параллельно</li>
+<li><strong>Human-like задержки:</strong> 2-5 сек между действиями, 30-60 сек между платформами</li>
+<li><strong>Рандомизация:</strong> случайные задержки ±30%</li>
+<li><strong>Rate limiting:</strong> жёсткие лимиты (см. таблицу), никогда не превышать</li>
+<li><strong>Stealth:</strong> playwright-extra + stealth plugin</li>
+<li><strong>Мониторинг:</strong> 3 фейла подряд → СТОП → диагностика</li>
+<li><strong>Cooldown:</strong> captcha/warning → 24 часа без действий</li>
+<li><strong>Ротация:</strong> не одинаковые действия в одно время каждый день</li>
+<li><strong>Content variety:</strong> никогда идентичный текст на 2+ платформах</li>
+</ol>
+</div>
+
+<h2>Расписание cron</h2>
+
+<div class="card">
+<pre>
+# Утренний: соцсети (API)
+0 8 * * 1-5     LinkedIn/X/Threads посты
+
+# Дневной: блог-платформы
+0 12 * * 1,3    Dev.to/Hashnode/Medium статьи
+0 12 * * 2,4    Substack/HN/Reddit
+
+# Вечерний: Telegram + engagement
+0 19 * * 1-5    TG посты + engagement round
+
+# Ночной: мониторинг + подготовка
+0 23 * * *      мониторинг трендов, контент
+
+# Еженедельно
+0 10 * * 3      Substack Newsletter (Ср)
+0 12 * * 5      Хабр/VC.ru RU контент (Пт)
+0 14 * * 6      аналитика за неделю (Сб)
+</pre>
+</div>
+
+<h2>Рекомендация: гибридный подход</h2>
+
+<div class="card-grid">
+  <div class="metric green"><div class="num">Статьи</div><div class="label">Playwright/API скиллы (уже работают, 11 скиллов)</div></div>
+  <div class="metric"><div class="num">Соцсети</div><div class="label">Postiz CLI или прямые API вызовы</div></div>
+  <div class="metric orange"><div class="num">Engagement</div><div class="label">Playwright MCP (требует "мозги" Claude)</div></div>
+  <div class="metric purple"><div class="num">Мониторинг</div><div class="label">MCP-серверы + RSS (Talkwalker, hnrss, Feedly)</div></div>
+</div>
+
+</div>
+</body></html>

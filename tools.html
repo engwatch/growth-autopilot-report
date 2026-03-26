@@ -11,10 +11,60 @@
 <div class="container">
 
 <h1>Каталог инструментов автоматизации</h1>
-<p class="subtitle">GitHub-скиллы, MCP-серверы, API-библиотеки, open-source агрегаторы</p>
+<p class="subtitle">Полный маппинг: все 19 платформ → конкретный инструмент автоматизации</p>
+
+<!-- MASTER TABLE -->
+<h2>Все 19 платформ: какой инструмент для какой задачи</h2>
+
+<div class="overflow-x">
+<table>
+<tr><th>#</th><th>Платформа</th><th>Язык</th><th>Постинг</th><th>Инструмент постинга</th><th>Engagement</th><th>Инструмент engagement</th><th>Наш скилл</th></tr>
+<tr><td>1</td><td><strong>Threads</strong></td><td><span class="lang-ru">RU</span></td><td>Meta API</td><td>pythreads (69★), threads_api (278★)</td><td>Playwright</td><td>Playwright MCP</td><td>threads-publish.md ✅</td></tr>
+<tr><td>2</td><td><strong>X/Twitter</strong></td><td><span class="lang-ru">RU</span></td><td>X API Free / twikit</td><td>twikit (4190★), mcp-twikit (229★), tweepy (11149★)</td><td>Playwright</td><td>mcp-twikit, Playwright MCP</td><td>x-twitter-publish.md ✅</td></tr>
+<tr><td>3</td><td><strong>LinkedIn</strong></td><td><span class="lang-en">EN</span></td><td>Playwright / MCP</td><td>mcp-linkedin (197★), python-linkedin (912★)</td><td>Вручную</td><td>Нет (AI-детекция)</td><td>linkedin-publish.md ✅</td></tr>
+<tr><td>4</td><td><strong>Telegram</strong></td><td><span class="lang-ru">RU</span></td><td>Bot API / MCP</td><td>python-telegram-bot (28982★), mcp-telegram (239★)</td><td>-</td><td>-</td><td>telegram-publish.md ✅</td></tr>
+<tr><td>5</td><td>Dev.to</td><td><span class="lang-en">EN</span>/ES/PT</td><td>REST API</td><td>curl POST /api/articles (бесплатный ключ)</td><td>-</td><td>-</td><td>devto-publish.md ✅</td></tr>
+<tr><td>6</td><td>Medium</td><td><span class="lang-en">EN</span>/RU</td><td>Playwright</td><td>Playwright MCP (API deprecated 2017)</td><td>Playwright</td><td>Playwright MCP (claps, follows)</td><td>medium-publish.md ✅</td></tr>
+<tr><td>7</td><td>Hashnode</td><td><span class="lang-en">EN</span></td><td>GraphQL API</td><td>curl GraphQL (бесплатный PAT), hashnode-mcp (6★)</td><td>-</td><td>-</td><td>hashnode-publish.md ✅</td></tr>
+<tr><td>8</td><td>Substack</td><td><span class="lang-en">EN</span></td><td>Playwright + API</td><td>python-substack (142★), substack_api (179★)</td><td>-</td><td>-</td><td>substack (скилл) ✅</td></tr>
+<tr><td>9</td><td>HackerNoon</td><td><span class="lang-en">EN</span></td><td>Ручной</td><td>Нет (human review, 55% reject)</td><td>-</td><td>-</td><td>Нет</td></tr>
+<tr><td>10</td><td>Хабр</td><td><span class="lang-ru">RU</span></td><td>Playwright</td><td>Playwright MCP (нет API)</td><td>-</td><td>-</td><td>habr-publish.md ✅</td></tr>
+<tr><td>11</td><td>VC.ru</td><td><span class="lang-ru">RU</span></td><td>Playwright</td><td>Playwright MCP (нет API)</td><td>-</td><td>-</td><td>vcru-publish.md ✅</td></tr>
+<tr><td>12</td><td>TabNews</td><td>PT</td><td>REST API</td><td>curl POST /api/v1/contents (session token)</td><td>-</td><td>-</td><td>tabnews-publish.md ✅</td></tr>
+<tr><td>13</td><td>Bluesky</td><td><span class="lang-en">EN</span></td><td>AT Protocol</td><td>atproto (645★) - полный CRUD</td><td>AT Protocol</td><td>atproto (лайки, репосты, подписки)</td><td>Нет (создать)</td></tr>
+<tr><td>14</td><td>Reddit</td><td><span class="lang-en">EN</span></td><td>PRAW / MCP</td><td>PRAW (4064★), mcp-reddit (376★)</td><td>PRAW / MCP</td><td>mcp-reddit, PRAW</td><td>Нет (создать)</td></tr>
+<tr><td>15</td><td>Mastodon</td><td><span class="lang-en">EN</span></td><td>REST API</td><td>Mastodon.py (948★) - полный CRUD</td><td>REST API</td><td>Mastodon.py</td><td>Нет (создать)</td></tr>
+<tr><td>16</td><td>Hacker News</td><td><span class="lang-en">EN</span></td><td>Playwright</td><td>Playwright MCP (нет API постинга)</td><td>Playwright</td><td>Playwright MCP</td><td>Нет (создать)</td></tr>
+<tr><td>17</td><td>Product Hunt</td><td><span class="lang-en">EN</span></td><td>Playwright</td><td>Playwright MCP (нет публичного API)</td><td>-</td><td>-</td><td>Нет (создать)</td></tr>
+<tr><td>18</td><td>GitHub Gists</td><td><span class="lang-en">EN</span></td><td>REST API</td><td>curl GitHub API (бесплатный)</td><td>-</td><td>-</td><td>Нет (создать)</td></tr>
+<tr><td>19</td><td>Instagram</td><td>-</td><td>Кросс-пост</td><td>Через Threads API (авто)</td><td>-</td><td>-</td><td>Через Threads</td></tr>
+</table>
+</div>
+
+<div class="card-grid">
+  <div class="metric green"><div class="num">11 из 19</div><div class="label">Платформ с готовыми скиллами</div></div>
+  <div class="metric orange"><div class="num">6 из 19</div><div class="label">Нужно создать скиллы (Bluesky, Reddit, Mastodon, HN, PH, Gists)</div></div>
+  <div class="metric red"><div class="num">1 из 19</div><div class="label">Только ручной (HackerNoon)</div></div>
+  <div class="metric purple"><div class="num">1 из 19</div><div class="label">Через другую платформу (Instagram → Threads)</div></div>
+</div>
+
+<h2>Универсальные агрегаторы (покрывают множество платформ)</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <h3><a href="https://github.com/gitroomhq/postiz-app" target="_blank">Postiz</a> <span class="stars">27 611 ★</span></h3>
+    <p>Open-source аналог Buffer. Self-hosted Docker. <strong>28+ платформ</strong> из одного места.</p>
+    <p><span class="tag">X</span> <span class="tag">LinkedIn</span> <span class="tag">Threads</span> <span class="tag">TG</span> <span class="tag">Reddit</span> <span class="tag">Bluesky</span> <span class="tag">Mastodon</span> <span class="tag">Medium</span> <span class="tag">Dev.to</span> <span class="tag">Hashnode</span> <span class="tag">Instagram</span> <span class="tag">YouTube</span> <span class="tag">TikTok</span></p>
+    <p>CLI-скилл: <a href="https://github.com/gitroomhq/postiz-agent" target="_blank">postiz-agent</a> (83★) - управление из Claude Code</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/affaan-m/everything-claude-code" target="_blank">everything-claude-code</a> <span class="stars">108 780 ★</span></h3>
+    <p>Коллекция Claude Code скиллов. crosspost → X, LinkedIn, Threads, Bluesky. content-engine → адаптация под платформы.</p>
+  </div>
+</div>
 
 <!-- Claude Code Skills -->
-<h2>Claude Code скиллы (SKILL.md)</h2>
+<h2>Claude Code скиллы (SKILL.md) - детали</h2>
 
 <div class="overflow-x">
 <table>

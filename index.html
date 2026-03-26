@@ -35,28 +35,34 @@
   </div>
 </div>
 
-<h2>19+ платформ: статус</h2>
+<h2>19 платформ: статус и автоматизация</h2>
 
 <div class="overflow-x">
 <table>
-<tr><th>#</th><th>Платформа</th><th>Язык</th><th>Тип</th><th>Метод</th><th>Приоритет</th><th>Статус</th></tr>
-<tr><td>1</td><td><strong>Threads</strong></td><td><span class="lang-ru">RU</span></td><td>Соцсеть</td><td>API (постинг) + Playwright (комменты)</td><td style="color:var(--red)">Критический</td><td>Готов</td></tr>
-<tr><td>2</td><td><strong>X/Twitter</strong></td><td><span class="lang-ru">RU</span></td><td>Соцсеть</td><td>API (постинг) + Playwright (engagement)</td><td style="color:var(--red)">Критический</td><td>Готов</td></tr>
-<tr><td>3</td><td><strong>LinkedIn</strong></td><td><span class="lang-en">EN</span></td><td>Соцсеть</td><td>Playwright</td><td style="color:var(--red)">Критический</td><td>Готов</td></tr>
-<tr><td>4</td><td><strong>Telegram</strong></td><td><span class="lang-ru">RU</span></td><td>Канал</td><td>Bot API / MCP</td><td style="color:var(--red)">Критический</td><td>@danielspe_chanel</td></tr>
-<tr><td>5</td><td>Dev.to</td><td><span class="lang-en">EN</span>/ES/PT</td><td>Блог</td><td>REST API</td><td style="color:var(--orange)">Высокий</td><td>Статья 1 ✅</td></tr>
-<tr><td>6</td><td>Medium</td><td><span class="lang-en">EN</span>/RU</td><td>Блог</td><td>Playwright</td><td style="color:var(--orange)">Высокий</td><td>Статья 1 ✅</td></tr>
-<tr><td>7</td><td>Hashnode</td><td><span class="lang-en">EN</span></td><td>Блог</td><td>GraphQL API</td><td style="color:var(--orange)">Высокий</td><td>Статья 1 ✅</td></tr>
-<tr><td>8</td><td>Substack</td><td><span class="lang-en">EN</span></td><td>Newsletter</td><td>Playwright + API</td><td style="color:var(--orange)">Высокий</td><td>Готов</td></tr>
-<tr><td>9</td><td>Хабр</td><td><span class="lang-ru">RU</span></td><td>Блог</td><td>Playwright</td><td>Средний</td><td>Песочница</td></tr>
-<tr><td>10</td><td>VC.ru</td><td><span class="lang-ru">RU</span></td><td>Блог</td><td>Playwright</td><td>Средний</td><td>Статья 1 ✅</td></tr>
-<tr><td>11</td><td>TabNews</td><td>PT</td><td>Блог</td><td>REST API</td><td>Доп.</td><td>Статья 1 ✅</td></tr>
-<tr><td>12</td><td>Bluesky</td><td><span class="lang-en">EN</span></td><td>Соцсеть</td><td>AT Protocol API</td><td>Средний</td><td>Нужна регистрация</td></tr>
-<tr><td>13</td><td>Reddit</td><td><span class="lang-en">EN</span></td><td>Форум</td><td>PRAW / Playwright</td><td>Средний</td><td>3-6 мес прогрев</td></tr>
-<tr><td>14</td><td>Mastodon</td><td><span class="lang-en">EN</span></td><td>Соцсеть</td><td>REST API</td><td>Доп.</td><td>hCaptcha</td></tr>
-<tr><td>15</td><td>Hacker News</td><td><span class="lang-en">EN</span></td><td>Форум</td><td>Playwright</td><td>Средний</td><td>Только комменты</td></tr>
+<tr><th>#</th><th>Платформа</th><th>Язык</th><th>Тип</th><th>Метод постинга</th><th>Инструмент автоматизации</th><th>Приоритет</th><th>Статус</th></tr>
+<tr><td>1</td><td><strong>Threads</strong></td><td><span class="lang-ru">RU</span></td><td>Соцсеть</td><td>Meta API (посты) + Playwright (комменты)</td><td>pythreads (69★), threads_api (278★)</td><td style="color:var(--red)">Критический</td><td>Готов</td></tr>
+<tr><td>2</td><td><strong>X/Twitter</strong></td><td><span class="lang-ru">RU</span></td><td>Соцсеть</td><td>X API Free + Playwright (engagement)</td><td>twikit (4190★), mcp-twikit (229★), tweepy (11149★)</td><td style="color:var(--red)">Критический</td><td>Готов</td></tr>
+<tr><td>3</td><td><strong>LinkedIn</strong></td><td><span class="lang-en">EN</span></td><td>Соцсеть</td><td>Playwright / MCP</td><td>mcp-linkedin (197★), python-linkedin (912★)</td><td style="color:var(--red)">Критический</td><td>Готов</td></tr>
+<tr><td>4</td><td><strong>Telegram</strong></td><td><span class="lang-ru">RU</span></td><td>Канал</td><td>Bot API / MCP</td><td>python-telegram-bot (28982★), mcp-telegram (239★)</td><td style="color:var(--red)">Критический</td><td>@danielspe_chanel</td></tr>
+<tr><td>5</td><td>Dev.to</td><td><span class="lang-en">EN</span>/ES/PT</td><td>Блог</td><td>REST API</td><td>curl (встроенный API, бесплатный ключ)</td><td style="color:var(--orange)">Высокий</td><td>Статья 1 ✅</td></tr>
+<tr><td>6</td><td>Medium</td><td><span class="lang-en">EN</span>/RU</td><td>Блог</td><td>Playwright</td><td>Скилл medium-publish.md (API deprecated 2017)</td><td style="color:var(--orange)">Высокий</td><td>Статья 1 ✅</td></tr>
+<tr><td>7</td><td>Hashnode</td><td><span class="lang-en">EN</span></td><td>Блог</td><td>GraphQL API</td><td>curl (встроенный GraphQL), hashnode-mcp (6★)</td><td style="color:var(--orange)">Высокий</td><td>Статья 1 ✅</td></tr>
+<tr><td>8</td><td>Substack</td><td><span class="lang-en">EN</span></td><td>Newsletter</td><td>Playwright + reverse-eng API</td><td>python-substack (142★), substack_api (179★)</td><td style="color:var(--orange)">Высокий</td><td>Готов</td></tr>
+<tr><td>9</td><td>HackerNoon</td><td><span class="lang-en">EN</span></td><td>Блог</td><td>Ручной (human review)</td><td>Нет автоматизации (55% reject, редактура)</td><td style="color:var(--orange)">Высокий</td><td>Статья 1 ✅</td></tr>
+<tr><td>10</td><td>Хабр</td><td><span class="lang-ru">RU</span></td><td>Блог</td><td>Playwright</td><td>Скилл habr-publish.md</td><td>Средний</td><td>Песочница</td></tr>
+<tr><td>11</td><td>VC.ru</td><td><span class="lang-ru">RU</span></td><td>Блог</td><td>Playwright</td><td>Скилл vcru-publish.md</td><td>Средний</td><td>Статья 1 ✅</td></tr>
+<tr><td>12</td><td>TabNews</td><td>PT</td><td>Блог</td><td>REST API</td><td>curl (встроенный API, session token)</td><td>Доп.</td><td>Статья 1 ✅</td></tr>
+<tr><td>13</td><td>Bluesky</td><td><span class="lang-en">EN</span></td><td>Соцсеть</td><td>AT Protocol API</td><td>atproto (645★) - полный CRUD, бесплатный</td><td>Средний</td><td>Нужна регистрация</td></tr>
+<tr><td>14</td><td>Reddit</td><td><span class="lang-en">EN</span></td><td>Форум</td><td>PRAW / MCP</td><td>PRAW (4064★), mcp-reddit (376★)</td><td>Средний</td><td>3-6 мес прогрев</td></tr>
+<tr><td>15</td><td>Mastodon</td><td><span class="lang-en">EN</span></td><td>Соцсеть</td><td>REST API</td><td>Mastodon.py (948★) - полный CRUD, бесплатный</td><td>Доп.</td><td>hCaptcha</td></tr>
+<tr><td>16</td><td>Hacker News</td><td><span class="lang-en">EN</span></td><td>Форум</td><td>Playwright (нет API постинга)</td><td>Playwright MCP (API только для чтения)</td><td>Средний</td><td>Только комменты</td></tr>
+<tr><td>17</td><td>Product Hunt</td><td><span class="lang-en">EN</span></td><td>Лончпад</td><td>Playwright</td><td>Playwright MCP (нет публичного API)</td><td>Доп.</td><td>Зарегистрирован</td></tr>
+<tr><td>18</td><td>GitHub Gists</td><td><span class="lang-en">EN</span></td><td>Code</td><td>REST API</td><td>curl (GitHub API, бесплатный)</td><td>Доп.</td><td>Готов</td></tr>
+<tr><td>19</td><td>Instagram</td><td>-</td><td>Визуал</td><td>Кросс-пост из Threads</td><td>Через Threads API (автоматический кросс-пост)</td><td>Доп.</td><td>Связан с Threads</td></tr>
 </table>
 </div>
+
+<div class="info"><strong>Итого автоматизация:</strong> 15 из 19 платформ автоматизируются через API/MCP/скиллы. 3 платформы требуют Playwright (Medium, Хабр, VC.ru). 1 платформа ручная (HackerNoon).</div>
 
 <h2>Воронка: трафик → подписка → сообщество</h2>
 

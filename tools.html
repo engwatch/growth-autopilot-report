@@ -11,255 +11,544 @@
 <div class="container">
 
 <h1>Каталог инструментов автоматизации</h1>
-<p class="subtitle">Полный маппинг: все 19 платформ → конкретный инструмент автоматизации</p>
+<p class="subtitle">Глубокое GitHub-исследование: 100+ репозиториев проанализировано для 19 платформ<br>Источник: gh search repos / gh search code, март 2026</p>
 
-<!-- MASTER TABLE -->
-<h2>Все 19 платформ: какой инструмент для какой задачи</h2>
+<div class="info"><strong>Методология:</strong> 5 параллельных исследовательских агентов искали по GitHub: MCP-серверы, API-библиотеки, SKILL.md скиллы, кросспостинг-агрегаторы, CLI-утилиты. Ниже - только реальные находки с ссылками и звёздами.</div>
+
+<!-- ==================== MASTER TABLE ==================== -->
+<h2>Мастер-таблица: 19 платформ - инструменты автоматизации</h2>
 
 <div class="overflow-x">
 <table>
-<tr><th>#</th><th>Платформа</th><th>Язык</th><th>Постинг</th><th>Инструмент постинга</th><th>Engagement</th><th>Инструмент engagement</th><th>Наш скилл</th></tr>
-<tr><td>1</td><td><strong>Threads</strong></td><td><span class="lang-ru">RU</span></td><td>Meta API</td><td>pythreads (69★), threads_api (278★)</td><td>Playwright</td><td>Playwright MCP</td><td>threads-publish.md ✅</td></tr>
-<tr><td>2</td><td><strong>X/Twitter</strong></td><td><span class="lang-ru">RU</span></td><td>X API Free / twikit</td><td>twikit (4190★), mcp-twikit (229★), tweepy (11149★)</td><td>Playwright</td><td>mcp-twikit, Playwright MCP</td><td>x-twitter-publish.md ✅</td></tr>
-<tr><td>3</td><td><strong>LinkedIn</strong></td><td><span class="lang-en">EN</span></td><td>Playwright / MCP</td><td>mcp-linkedin (197★), python-linkedin (912★)</td><td>Вручную</td><td>Нет (AI-детекция)</td><td>linkedin-publish.md ✅</td></tr>
-<tr><td>4</td><td><strong>Telegram</strong></td><td><span class="lang-ru">RU</span></td><td>Bot API / MCP</td><td>python-telegram-bot (28982★), mcp-telegram (239★)</td><td>-</td><td>-</td><td>telegram-publish.md ✅</td></tr>
-<tr><td>5</td><td>Dev.to</td><td><span class="lang-en">EN</span>/ES/PT</td><td>REST API</td><td>curl POST /api/articles (бесплатный ключ)</td><td>-</td><td>-</td><td>devto-publish.md ✅</td></tr>
-<tr><td>6</td><td>Medium</td><td><span class="lang-en">EN</span>/RU</td><td>Playwright</td><td>Playwright MCP (API deprecated 2017)</td><td>Playwright</td><td>Playwright MCP (claps, follows)</td><td>medium-publish.md ✅</td></tr>
-<tr><td>7</td><td>Hashnode</td><td><span class="lang-en">EN</span></td><td>GraphQL API</td><td>curl GraphQL (бесплатный PAT), hashnode-mcp (6★)</td><td>-</td><td>-</td><td>hashnode-publish.md ✅</td></tr>
-<tr><td>8</td><td>Substack</td><td><span class="lang-en">EN</span></td><td>Playwright + API</td><td>python-substack (142★), substack_api (179★)</td><td>-</td><td>-</td><td>substack (скилл) ✅</td></tr>
-<tr><td>9</td><td>HackerNoon</td><td><span class="lang-en">EN</span></td><td>Ручной</td><td>Нет (human review, 55% reject)</td><td>-</td><td>-</td><td>Нет</td></tr>
-<tr><td>10</td><td>Хабр</td><td><span class="lang-ru">RU</span></td><td>Playwright</td><td>Playwright MCP (нет API)</td><td>-</td><td>-</td><td>habr-publish.md ✅</td></tr>
-<tr><td>11</td><td>VC.ru</td><td><span class="lang-ru">RU</span></td><td>Playwright</td><td>Playwright MCP (нет API)</td><td>-</td><td>-</td><td>vcru-publish.md ✅</td></tr>
-<tr><td>12</td><td>TabNews</td><td>PT</td><td>REST API</td><td>curl POST /api/v1/contents (session token)</td><td>-</td><td>-</td><td>tabnews-publish.md ✅</td></tr>
-<tr><td>13</td><td>Bluesky</td><td><span class="lang-en">EN</span></td><td>AT Protocol</td><td>atproto (645★) - полный CRUD</td><td>AT Protocol</td><td>atproto (лайки, репосты, подписки)</td><td>Нет (создать)</td></tr>
-<tr><td>14</td><td>Reddit</td><td><span class="lang-en">EN</span></td><td>PRAW / MCP</td><td>PRAW (4064★), mcp-reddit (376★)</td><td>PRAW / MCP</td><td>mcp-reddit, PRAW</td><td>Нет (создать)</td></tr>
-<tr><td>15</td><td>Mastodon</td><td><span class="lang-en">EN</span></td><td>REST API</td><td>Mastodon.py (948★) - полный CRUD</td><td>REST API</td><td>Mastodon.py</td><td>Нет (создать)</td></tr>
-<tr><td>16</td><td>Hacker News</td><td><span class="lang-en">EN</span></td><td>Playwright</td><td>Playwright MCP (нет API постинга)</td><td>Playwright</td><td>Playwright MCP</td><td>Нет (создать)</td></tr>
-<tr><td>17</td><td>Product Hunt</td><td><span class="lang-en">EN</span></td><td>Playwright</td><td>Playwright MCP (нет публичного API)</td><td>-</td><td>-</td><td>Нет (создать)</td></tr>
-<tr><td>18</td><td>GitHub Gists</td><td><span class="lang-en">EN</span></td><td>REST API</td><td>curl GitHub API (бесплатный)</td><td>-</td><td>-</td><td>Нет (создать)</td></tr>
-<tr><td>19</td><td>Instagram</td><td>-</td><td>Кросс-пост</td><td>Через Threads API (авто)</td><td>-</td><td>-</td><td>Через Threads</td></tr>
+<tr><th>#</th><th>Платформа</th><th>Язык</th><th>Метод постинга</th><th>Лучший инструмент постинга</th><th>MCP-сервер</th><th>Engagement</th><th>Наш скилл</th></tr>
+<tr>
+  <td>1</td><td><strong>Threads</strong></td><td><span class="lang-ru">RU</span></td>
+  <td>Meta API</td>
+  <td><a href="https://github.com/junhoyeo/threads-api">threads-api</a> (1611★), <a href="https://github.com/marclove/pythreads">pythreads</a> (69★)</td>
+  <td><a href="https://github.com/SvetimFM/threads-mcp-server">threads-mcp-server</a> (2★)</td>
+  <td>Playwright</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>2</td><td><strong>X/Twitter</strong></td><td><span class="lang-ru">RU</span></td>
+  <td>X API / twikit</td>
+  <td><a href="https://github.com/tweepy/tweepy">tweepy</a> (11149★), <a href="https://github.com/d60/twikit">twikit</a> (4190★)</td>
+  <td><a href="https://github.com/adhikasp/mcp-twikit">mcp-twikit</a> (229★), <a href="https://github.com/LuniaKunal/mcp-twitter">mcp-twitter</a> (55★)</td>
+  <td>Playwright / MCP</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>3</td><td><strong>LinkedIn</strong></td><td><span class="lang-en">EN</span></td>
+  <td>Playwright / MCP</td>
+  <td><a href="https://github.com/ozgur/python-linkedin">python-linkedin</a> (912★), <a href="https://github.com/linkedin-developers/linkedin-api-python-client">linkedin-api-python</a> (247★)</td>
+  <td><a href="https://github.com/adhikasp/mcp-linkedin">mcp-linkedin</a> (197★), <a href="https://github.com/OneInterface/mcp-linkedin-automtion">mcp-linkedin-auto</a> (68★)</td>
+  <td>Вручную</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>4</td><td><strong>Telegram</strong></td><td><span class="lang-ru">RU</span></td>
+  <td>Bot API / MTProto</td>
+  <td><a href="https://github.com/python-telegram-bot/python-telegram-bot">python-telegram-bot</a> (28982★), <a href="https://github.com/LonamiWebs/Telethon">Telethon</a> (11915★)</td>
+  <td><a href="https://github.com/dryeab/mcp-telegram">mcp-telegram</a> (239★), <a href="https://github.com/leshchenko1979/fast-mcp-telegram">fast-mcp-telegram</a> (31★)</td>
+  <td>-</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>5</td><td>Dev.to</td><td><span class="lang-en">EN</span>/ES/PT</td>
+  <td>REST API</td>
+  <td><a href="https://github.com/sinedied/devto-cli">devto-cli</a> (44★), curl POST /api/articles</td>
+  <td><a href="https://github.com/Siddhant-K-code/mcp-devto-server">mcp-devto-server</a> (2★)</td>
+  <td>-</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>6</td><td>Medium</td><td><span class="lang-en">EN</span>/RU</td>
+  <td>Playwright</td>
+  <td><a href="https://github.com/Medium/medium-sdk-nodejs">medium-sdk-nodejs</a> (349★ deprecated), <a href="https://github.com/enginebai/PyMedium">PyMedium</a> (165★)</td>
+  <td><a href="https://github.com/designly1/mcp-medium">mcp-medium</a> (0★), <a href="https://github.com/umes4ever/aiagent-mcp-medium-publisher">mcp-medium-publisher</a> (0★)</td>
+  <td>Playwright</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>7</td><td>Hashnode</td><td><span class="lang-en">EN</span></td>
+  <td>GraphQL API</td>
+  <td><a href="https://github.com/Hashnode/hashnode-cli">hashnode-cli</a> (46★ official), curl GraphQL</td>
+  <td>Нет</td>
+  <td>-</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>8</td><td>Substack</td><td><span class="lang-en">EN</span></td>
+  <td>Playwright + API</td>
+  <td><a href="https://github.com/NHagar/substack_api">substack_api</a> (179★), <a href="https://github.com/ma2za/python-substack">python-substack</a> (142★)</td>
+  <td><a href="https://github.com/michalnaka/mcp-substack">mcp-substack</a> (20★ чтение)</td>
+  <td>-</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>9</td><td>HackerNoon</td><td><span class="lang-en">EN</span></td>
+  <td>Ручной</td>
+  <td>Нет (human review, 55% reject)</td>
+  <td>Нет</td>
+  <td>-</td>
+  <td>Нет</td>
+</tr>
+<tr>
+  <td>10</td><td>Хабр</td><td><span class="lang-ru">RU</span></td>
+  <td>Playwright</td>
+  <td><a href="https://github.com/habralab/habrahabr_api">habrahabr_api</a> (89★), Playwright MCP</td>
+  <td>Нет</td>
+  <td>-</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>11</td><td>VC.ru</td><td><span class="lang-ru">RU</span></td>
+  <td>Playwright</td>
+  <td><a href="https://github.com/tzurbaev/osnova-api">osnova-api</a> (1★ WIP), Playwright MCP</td>
+  <td>Нет</td>
+  <td>-</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>12</td><td>TabNews</td><td>PT</td>
+  <td>REST API</td>
+  <td><a href="https://github.com/miguel-l-b/tabnews.ts">tabnews.ts</a> (3★), curl POST /api/v1/contents</td>
+  <td>Нет</td>
+  <td>-</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>13</td><td>Bluesky</td><td><span class="lang-en">EN</span></td>
+  <td>AT Protocol</td>
+  <td><a href="https://github.com/bluesky-social/atproto">atproto TS</a> (9230★), <a href="https://github.com/MarshalX/atproto">atproto Python</a> (645★)</td>
+  <td><a href="https://github.com/amovfx/mcp-bluesky">mcp-bluesky</a> (0★)</td>
+  <td>AT Protocol API</td>
+  <td>Создать</td>
+</tr>
+<tr>
+  <td>14</td><td>Reddit</td><td><span class="lang-en">EN</span></td>
+  <td>PRAW / MCP</td>
+  <td><a href="https://github.com/praw-dev/praw">PRAW</a> (4064★)</td>
+  <td><a href="https://github.com/adhikasp/mcp-reddit">mcp-reddit</a> (376★ чтение), <a href="https://github.com/jlcases/mcp-reddit">jlcases/mcp-reddit</a> (23★ запись!)</td>
+  <td>PRAW / MCP</td>
+  <td>Создать</td>
+</tr>
+<tr>
+  <td>15</td><td>Mastodon</td><td><span class="lang-en">EN</span></td>
+  <td>REST API</td>
+  <td><a href="https://github.com/halcy/Mastodon.py">Mastodon.py</a> (948★) - полный CRUD</td>
+  <td>Нет</td>
+  <td>REST API</td>
+  <td>Создать</td>
+</tr>
+<tr>
+  <td>16</td><td>Hacker News</td><td><span class="lang-en">EN</span></td>
+  <td>Playwright</td>
+  <td><a href="https://github.com/marcomoauro/hackernews-automation">hackernews-automation</a> (0★ Puppeteer)</td>
+  <td><a href="https://github.com/hungran/hyper-mcp-hackernews-tool">hyper-mcp-hn</a> (3★ чтение)</td>
+  <td>Playwright</td>
+  <td>Создать</td>
+</tr>
+<tr>
+  <td>17</td><td>Product Hunt</td><td><span class="lang-en">EN</span></td>
+  <td>Playwright / API</td>
+  <td><a href="https://github.com/producthunt/producthunt-api">producthunt-api</a> (360★ official)</td>
+  <td>Нет</td>
+  <td>-</td>
+  <td>Создать</td>
+</tr>
+<tr>
+  <td>18</td><td>GitHub Gists</td><td><span class="lang-en">EN</span></td>
+  <td>REST API</td>
+  <td><code>gh gist create</code> (встроенный CLI)</td>
+  <td>Не нужен</td>
+  <td>-</td>
+  <td>Создать</td>
+</tr>
+<tr>
+  <td>19</td><td>Instagram</td><td>-</td>
+  <td>Кросс-пост</td>
+  <td>Автоматический из Threads API</td>
+  <td>Через Threads</td>
+  <td>-</td>
+  <td>Через Threads</td>
+</tr>
 </table>
 </div>
 
 <div class="card-grid">
-  <div class="metric green"><div class="num">11 из 19</div><div class="label">Платформ с готовыми скиллами</div></div>
-  <div class="metric orange"><div class="num">6 из 19</div><div class="label">Нужно создать скиллы (Bluesky, Reddit, Mastodon, HN, PH, Gists)</div></div>
-  <div class="metric red"><div class="num">1 из 19</div><div class="label">Только ручной (HackerNoon)</div></div>
-  <div class="metric purple"><div class="num">1 из 19</div><div class="label">Через другую платформу (Instagram → Threads)</div></div>
+  <div class="metric green"><div class="num">11 / 19</div><div class="label">Платформ с готовыми скиллами</div></div>
+  <div class="metric orange"><div class="num">6 / 19</div><div class="label">Нужно создать скиллы</div></div>
+  <div class="metric red"><div class="num">1 / 19</div><div class="label">Только ручной (HackerNoon)</div></div>
+  <div class="metric purple"><div class="num">1 / 19</div><div class="label">Через другую платформу (Instagram)</div></div>
 </div>
 
-<h2>Универсальные агрегаторы (покрывают множество платформ)</h2>
+<!-- ==================== MCP SERVERS ==================== -->
+<h2>MCP-серверы для Claude Code (15 найдено)</h2>
 
-<div class="card-grid">
-  <div class="card">
-    <h3><a href="https://github.com/gitroomhq/postiz-app" target="_blank">Postiz</a> <span class="stars">27 611 ★</span></h3>
-    <p>Open-source аналог Buffer. Self-hosted Docker. <strong>28+ платформ</strong> из одного места.</p>
-    <p><span class="tag">X</span> <span class="tag">LinkedIn</span> <span class="tag">Threads</span> <span class="tag">TG</span> <span class="tag">Reddit</span> <span class="tag">Bluesky</span> <span class="tag">Mastodon</span> <span class="tag">Medium</span> <span class="tag">Dev.to</span> <span class="tag">Hashnode</span> <span class="tag">Instagram</span> <span class="tag">YouTube</span> <span class="tag">TikTok</span></p>
-    <p>CLI-скилл: <a href="https://github.com/gitroomhq/postiz-agent" target="_blank">postiz-agent</a> (83★) - управление из Claude Code</p>
-  </div>
-  <div class="card">
-    <h3><a href="https://github.com/affaan-m/everything-claude-code" target="_blank">everything-claude-code</a> <span class="stars">108 780 ★</span></h3>
-    <p>Коллекция Claude Code скиллов. crosspost → X, LinkedIn, Threads, Bluesky. content-engine → адаптация под платформы.</p>
-  </div>
-</div>
-
-<!-- Claude Code Skills -->
-<h2>Claude Code скиллы (SKILL.md) - детали</h2>
+<div class="info">MCP-серверы подключаются в Claude Code через <code>claude mcp add</code>. Позволяют постить и читать без Playwright.</div>
 
 <div class="overflow-x">
 <table>
-<tr><th>Скилл / Репо</th><th>Звёзды</th><th>Что делает</th><th>Платформы</th><th>Метод</th></tr>
-<tr>
-  <td><a href="https://github.com/affaan-m/everything-claude-code" target="_blank">everything-claude-code</a></td>
-  <td><span class="stars">108 780</span></td>
-  <td>Коллекция: crosspost, content-engine, article-writing</td>
-  <td>X, LinkedIn, Threads, Bluesky, Dev.to</td>
-  <td>API + Playwright</td>
+<tr><th>Платформа</th><th>MCP-сервер</th><th>★</th><th>Возможности</th><th>Запись?</th><th>Установка</th></tr>
+<tr style="background:var(--green-light)">
+  <td><strong>Reddit</strong></td>
+  <td><a href="https://github.com/adhikasp/mcp-reddit">adhikasp/mcp-reddit</a></td>
+  <td><span class="stars">376</span></td>
+  <td>Чтение hot/new/controversial, комменты, поиск</td>
+  <td>Нет</td>
+  <td>pip</td>
+</tr>
+<tr style="background:var(--green-light)">
+  <td><strong>Reddit</strong></td>
+  <td><a href="https://github.com/jlcases/mcp-reddit">jlcases/mcp-reddit</a></td>
+  <td><span class="stars">23</span></td>
+  <td>create_post, add_comment, vote + чтение trending</td>
+  <td style="color:var(--green);font-weight:700">Да!</td>
+  <td>pip</td>
 </tr>
 <tr>
-  <td>↳ crosspost/SKILL.md</td>
-  <td>-</td>
-  <td>Кросс-постинг текста на 4+ платформы с адаптацией</td>
-  <td>X, LinkedIn, Threads, Bluesky</td>
-  <td>API / Buffer</td>
+  <td><strong>Telegram</strong></td>
+  <td><a href="https://github.com/dryeab/mcp-telegram">dryeab/mcp-telegram</a></td>
+  <td><span class="stars">239</span></td>
+  <td>send/edit/delete, search, drafts, media. MTProto (Telethon)</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>pip</td>
 </tr>
 <tr>
-  <td>↳ content-engine/SKILL.md</td>
-  <td>-</td>
-  <td>Генерация платформо-нативного контента из pillar-статьи</td>
-  <td>Все</td>
-  <td>Claude</td>
+  <td><strong>Telegram</strong></td>
+  <td><a href="https://github.com/leshchenko1979/fast-mcp-telegram">fast-mcp-telegram</a></td>
+  <td><span class="stars">31</span></td>
+  <td>send/edit/reply, search, raw MTProto, multi-user, Docker</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>pip/Docker</td>
 </tr>
 <tr>
-  <td>↳ article-writing/SKILL.md</td>
-  <td>-</td>
-  <td>Длинные тексты с голосом бренда</td>
-  <td>Блог-платформы</td>
-  <td>Claude</td>
+  <td><strong>Telegram</strong></td>
+  <td><a href="https://github.com/EthanSky2986/mcp-telegram-claudecode">mcp-telegram-claudecode</a></td>
+  <td><span class="stars">6</span></td>
+  <td>Специально под Claude Code: send/receive, photos, remote approval</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>npm</td>
 </tr>
 <tr>
-  <td><a href="https://github.com/gitroomhq/postiz-agent" target="_blank">postiz-agent</a></td>
-  <td><span class="stars">83</span></td>
-  <td>CLI скилл для Postiz. Создание постов, треды, медиа, аналитика</td>
-  <td><strong>28+ платформ</strong></td>
-  <td>API Postiz</td>
+  <td><strong>X/Twitter</strong></td>
+  <td><a href="https://github.com/adhikasp/mcp-twikit">mcp-twikit</a></td>
+  <td><span class="stars">229</span></td>
+  <td>Чтение, постинг, поиск <strong>без API ключа</strong></td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>pip</td>
 </tr>
 <tr>
-  <td><a href="https://github.com/vibeforge1111/vibeship-spawner-skills" target="_blank">vibeship-spawner-skills</a></td>
-  <td><span class="stars">834</span></td>
-  <td>Стратегия комьюнити (паттерны, анти-паттерны)</td>
-  <td>Twitter, Reddit, Farcaster</td>
-  <td>Стратегический</td>
+  <td><strong>X/Twitter</strong></td>
+  <td><a href="https://github.com/LuniaKunal/mcp-twitter">mcp-twitter</a></td>
+  <td><span class="stars">55</span></td>
+  <td>Управление аккаунтом, постинг</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>npm</td>
 </tr>
-</table>
-</div>
-
-<!-- Open-Source Aggregators -->
-<h2>Open-source агрегаторы постинга</h2>
-
-<div class="card-grid">
-  <div class="card">
-    <h3><a href="https://github.com/gitroomhq/postiz-app" target="_blank">Postiz</a> <span class="stars">27 611 ★</span></h3>
-    <p>Полноценный open-source аналог Buffer/Hootsuite. Self-hosted Docker.</p>
-    <p><strong>28+ платформ:</strong> X, LinkedIn, Threads, TG, Reddit, Bluesky, Mastodon, Instagram, YouTube, TikTok, Pinterest, Medium, Dev.to, Hashnode, WordPress и др.</p>
-    <p><span class="tag">AI-генерация</span> <span class="tag">расписание</span> <span class="tag">аналитика</span> <span class="tag">CLI</span></p>
-    <div class="warn" style="margin-top:12px">Рекомендация #1. Может заменить n8n для кросс-постинга. CLI-скилл (postiz-agent) управляет из Claude Code.</div>
-  </div>
-  <div class="card">
-    <h3><a href="https://github.com/inovector/mixpost" target="_blank">Mixpost</a> <span class="stars">3 066 ★</span></h3>
-    <p>Laravel-based планировщик. Self-hosted.</p>
-    <p><strong>Платформы:</strong> X, Facebook, Instagram, Mastodon, LinkedIn, Pinterest, TikTok, YouTube</p>
-    <p><span class="tag">PHP/Laravel</span> <span class="tag">Docker</span></p>
-  </div>
-</div>
-
-<!-- MCP Servers -->
-<h2>MCP-серверы для Claude Code</h2>
-
-<div class="info">MCP-серверы подключаются напрямую в Claude Code. Позволяют постить/читать из CLI без Playwright.</div>
-
-<div class="overflow-x">
-<table>
-<tr><th>Платформа</th><th>MCP-сервер</th><th>Звёзды</th><th>Что можно</th><th>Установка</th></tr>
-<tr><td><strong>Reddit</strong></td><td><a href="https://github.com/adhikasp/mcp-reddit" target="_blank">mcp-reddit</a></td><td><span class="stars">376</span></td><td>Чтение постов, комментариев, поиск, тренды</td><td>npm</td></tr>
-<tr><td><strong>Telegram</strong></td><td><a href="https://github.com/dryeab/mcp-telegram" target="_blank">mcp-telegram</a></td><td><span class="stars">239</span></td><td>Отправка, чтение сообщений</td><td>npm</td></tr>
-<tr><td><strong>X/Twitter</strong></td><td><a href="https://github.com/adhikasp/mcp-twikit" target="_blank">mcp-twikit</a></td><td><span class="stars">229</span></td><td>Чтение, постинг, поиск <strong>БЕЗ API ключа!</strong></td><td>pip</td></tr>
-<tr><td><strong>LinkedIn</strong></td><td><a href="https://github.com/adhikasp/mcp-linkedin" target="_blank">mcp-linkedin</a></td><td><span class="stars">197</span></td><td>Чтение, постинг</td><td>npm</td></tr>
-<tr><td><strong>Substack</strong></td><td><a href="https://github.com/michalnaka/mcp-substack" target="_blank">mcp-substack</a></td><td>~20</td><td>Только чтение</td><td>pip</td></tr>
-<tr><td><strong>Hashnode</strong></td><td><a href="https://github.com/sbmagar13/hashnode-mcp-server" target="_blank">hashnode-mcp</a></td><td>6</td><td>GraphQL публикация</td><td>npm</td></tr>
+<tr>
+  <td><strong>X/Twitter</strong></td>
+  <td><a href="https://github.com/nirholas/XActions">XActions</a></td>
+  <td><span class="stars">133</span></td>
+  <td>Полный тулкит: скрапинг + MCP + CLI + browser-скрипты. Auto follow/like/comment</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>npm</td>
+</tr>
+<tr>
+  <td><strong>LinkedIn</strong></td>
+  <td><a href="https://github.com/adhikasp/mcp-linkedin">adhikasp/mcp-linkedin</a></td>
+  <td><span class="stars">197</span></td>
+  <td>Чтение фидов, постинг. Unofficial API</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>pip</td>
+</tr>
+<tr>
+  <td><strong>LinkedIn</strong></td>
+  <td><a href="https://github.com/OneInterface/mcp-linkedin-automtion">mcp-linkedin-automtion</a></td>
+  <td><span class="stars">68</span></td>
+  <td>LinkedIn автоматизация</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>pip</td>
+</tr>
+<tr>
+  <td><strong>LinkedIn</strong></td>
+  <td><a href="https://github.com/timkulbaev/mcp-linkedin">timkulbaev/mcp-linkedin</a></td>
+  <td><span class="stars">1</span></td>
+  <td>Publishing, commenting, reacting. <strong>SKILL.md в комплекте!</strong> Dry-run по умолчанию</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>npm</td>
+</tr>
+<tr>
+  <td><strong>Threads</strong></td>
+  <td><a href="https://github.com/SvetimFM/threads-mcp-server">threads-mcp-server</a></td>
+  <td><span class="stars">2</span></td>
+  <td>Dual account, analytics, thread chaining, webhooks</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>npm</td>
+</tr>
+<tr>
+  <td><strong>Substack</strong></td>
+  <td><a href="https://github.com/michalnaka/mcp-substack">mcp-substack</a></td>
+  <td><span class="stars">20</span></td>
+  <td>Скачивание и парсинг постов</td>
+  <td>Нет</td>
+  <td>pip</td>
+</tr>
+<tr>
+  <td><strong>Medium</strong></td>
+  <td><a href="https://github.com/umes4ever/aiagent-mcp-medium-publisher">mcp-medium-publisher</a></td>
+  <td><span class="stars">0</span></td>
+  <td>Генерация и публикация статей. Draft/public/unlisted</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>pip</td>
+</tr>
+<tr>
+  <td><strong>Dev.to</strong></td>
+  <td><a href="https://github.com/Siddhant-K-code/mcp-devto-server">mcp-devto-server</a></td>
+  <td><span class="stars">2</span></td>
+  <td>Публикация статей на Dev.to</td>
+  <td style="color:var(--green);font-weight:700">Да</td>
+  <td>npm</td>
+</tr>
+<tr>
+  <td><strong>HN</strong></td>
+  <td><a href="https://github.com/hungran/hyper-mcp-hackernews-tool">hyper-mcp-hn</a></td>
+  <td><span class="stars">3</span></td>
+  <td>Чтение top-100 stories (WASM)</td>
+  <td>Нет</td>
+  <td>wasm</td>
+</tr>
+<tr>
+  <td><strong>Bluesky</strong></td>
+  <td><a href="https://github.com/amovfx/mcp-bluesky">mcp-bluesky</a></td>
+  <td><span class="stars">0</span></td>
+  <td>Bluesky MCP-сервер</td>
+  <td>?</td>
+  <td>pip</td>
+</tr>
 </table>
 </div>
 
 <div class="warn">
-<strong>Ключевой инсайт:</strong> mcp-twikit позволяет постить в X <strong>без официального API ключа</strong> - через неофициальный twikit. Решает проблему лимитов Free tier.
-Автор <strong>adhikasp</strong> сделал MCP для Twitter, LinkedIn и Reddit.
+<strong>Ключевые находки:</strong><br>
+- <strong>jlcases/mcp-reddit</strong> - единственный Reddit MCP с записью (посты + комменты + голоса). adhikasp/mcp-reddit (376★) - только чтение<br>
+- <strong>mcp-twikit</strong> - постинг в X <strong>без API ключа</strong> через неофициальный twikit<br>
+- <strong>XActions</strong> (133★) - полный тулкит X с MCP-сервером в комплекте (auto follow/like/comment + scraping)<br>
+- <strong>timkulbaev/mcp-linkedin</strong> - уникален: включает SKILL.md, dry-run по умолчанию, 28 тестов<br>
+- <strong>fast-mcp-telegram</strong> (31★) - raw MTProto, multi-user, Docker - мощнее стандартного mcp-telegram<br>
+- Автор <strong>adhikasp</strong> сделал MCP для X, LinkedIn, Reddit - лидер экосистемы
 </div>
 
-<!-- API Libraries -->
-<h2>API-библиотеки по платформам</h2>
+<!-- ==================== CROSSPOST ==================== -->
+<h2>Кросспостинг-агрегаторы</h2>
 
-<h3>X / Twitter</h3>
+<div class="card-grid">
+  <div class="card">
+    <h3><a href="https://github.com/gitroomhq/postiz-app">Postiz</a> <span class="stars">27 500 ★</span></h3>
+    <p>Open-source аналог Buffer. Self-hosted Docker. <strong>30+ платформ</strong>.</p>
+    <p><span class="tag">X</span> <span class="tag">LinkedIn</span> <span class="tag">Threads</span> <span class="tag">TG</span> <span class="tag">Reddit</span> <span class="tag">Bluesky</span> <span class="tag">Mastodon</span> <span class="tag">Medium</span> <span class="tag">Dev.to</span> <span class="tag">Hashnode</span> <span class="tag">Instagram</span> <span class="tag">YouTube</span> <span class="tag">TikTok</span> <span class="tag">Discord</span> <span class="tag">VK</span></p>
+    <p>Agent CLI: <a href="https://github.com/gitroomhq/postiz-agent">postiz-agent</a> (83★) - управление из Claude Code</p>
+    <div class="warn" style="margin-top:8px"><strong>Рекомендация #1</strong> для кросспостинга. Один инструмент вместо десяти.</div>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/humanwhocodes/crosspost">crosspost</a> <span class="stars">MCP + CLI</span></h3>
+    <p><strong>Единственный мульти-платформенный MCP для кросспостинга!</strong></p>
+    <p><span class="tag">X</span> <span class="tag">Mastodon</span> <span class="tag">Bluesky</span> <span class="tag">LinkedIn</span> <span class="tag">Discord</span> <span class="tag">Telegram</span> <span class="tag">Dev.to</span> <span class="tag">Nostr</span></p>
+    <p><a href="https://humanwhocodes.com/blog/2025/04/post-social-media-claude-crosspost/">Туториал</a> по интеграции с Claude Desktop. Apache 2.0.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/inovector/mixpost">Mixpost</a> <span class="stars">2 000+ ★</span></h3>
+    <p>Laravel-based планировщик. Self-hosted Docker. 11 платформ.</p>
+    <p><span class="tag">X</span> <span class="tag">LinkedIn</span> <span class="tag">Instagram</span> <span class="tag">Threads</span> <span class="tag">Bluesky</span> <span class="tag">Mastodon</span> <span class="tag">TikTok</span> <span class="tag">YouTube</span></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/run-llama/crossposter">crossposter</a> <span class="stars">AI-powered</span></h3>
+    <p>Next.js + LlamaIndex. AI определяет хэндлы и адаптирует контент.</p>
+    <p><span class="tag">X</span> <span class="tag">LinkedIn</span> <span class="tag">Bluesky</span></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/kristoff-it/simplex">simplex</a> <span class="stars">CLI</span></h3>
+    <p>Shell-скрипт, оборачивает t + toot + bksy + linkedin-cli.</p>
+    <p><span class="tag">X</span> <span class="tag">Mastodon</span> <span class="tag">Bluesky</span> <span class="tag">LinkedIn</span></p>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/molly/w3igg-crossposter">w3igg-crossposter</a> <span class="stars">Python</span></h3>
+    <p>Кросспостинг из одного источника в 5 платформ. Python.</p>
+    <p><span class="tag">X</span> <span class="tag">Mastodon</span> <span class="tag">Bluesky</span> <span class="tag">Instagram</span> <span class="tag">Threads</span></p>
+  </div>
+</div>
+
+<!-- ==================== SKILL.MD ==================== -->
+<h2>Claude Code SKILL.md коллекции</h2>
+
+<div class="info">SKILL.md - формат навыков для Claude Code. Коллекции содержат готовые скиллы для социальных сетей и контент-маркетинга.</div>
+
 <div class="overflow-x">
 <table>
-<tr><th>Библиотека</th><th>Звёзды</th><th>Метод</th><th>Описание</th></tr>
-<tr><td><a href="https://github.com/tweepy/tweepy" target="_blank">tweepy</a></td><td><span class="stars">11 149</span></td><td>Official API</td><td>Классическая Python-обертка. Требует API ключи (платные)</td></tr>
-<tr><td><a href="https://github.com/d60/twikit" target="_blank">twikit</a></td><td><span class="stars">4 190</span></td><td>Internal API</td><td>Скрейпер без API-ключа. Бесплатный, но хрупкий</td></tr>
+<tr><th>Репозиторий</th><th>★</th><th>Скиллы для соцсетей</th><th>Платформы</th></tr>
+<tr>
+  <td><a href="https://github.com/anthropics/skills">anthropics/skills</a> (official)</td>
+  <td>-</td>
+  <td>Typefully skill: постинг через Typefully API</td>
+  <td>X, LinkedIn, Threads, Bluesky, Mastodon</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/VoltAgent/awesome-agent-skills">awesome-agent-skills</a></td>
+  <td><span class="stars">1000+</span></td>
+  <td>typefully, adaptlypost, social-content</td>
+  <td>X, LinkedIn, Threads, Bluesky, Mastodon, Instagram, TikTok</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/citriac/claude-skills">citriac/claude-skills</a></td>
+  <td>-</td>
+  <td>Content Distribution: авто-публикация на 5 платформ</td>
+  <td>Dev.to, Reddit, Hashnode, Juejin, Zhihu</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/onewave-ai/claude-skills">onewave-ai/claude-skills</a></td>
+  <td><span class="stars">100</span></td>
+  <td>social-repurposer: переформатирование контента</td>
+  <td>Все</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/coreyhaines31/marketingskills">marketingskills</a></td>
+  <td>-</td>
+  <td>CRO, copywriting, SEO, analytics, growth</td>
+  <td>Маркетинг в целом</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/alirezarezvani/claude-skills">alirezarezvani/claude-skills</a></td>
+  <td><span class="stars">192</span></td>
+  <td>Marketing + product + engineering skills</td>
+  <td>Маркетинг в целом</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/timkulbaev/mcp-linkedin">timkulbaev/mcp-linkedin</a></td>
+  <td><span class="stars">1</span></td>
+  <td>SKILL.md в комплекте с MCP: publish, comment, react</td>
+  <td>LinkedIn</td>
+</tr>
 </table>
 </div>
 
-<h3>LinkedIn</h3>
+<!-- ==================== X/TWITTER DEEP ==================== -->
+<h2>Детально: X/Twitter (лидер по инструментам)</h2>
+
 <div class="overflow-x">
 <table>
-<tr><th>Библиотека</th><th>Звёзды</th><th>Описание</th></tr>
-<tr><td><a href="https://github.com/ozgur/python-linkedin" target="_blank">python-linkedin</a></td><td><span class="stars">912</span></td><td>Неофициальная, давно существует</td></tr>
-<tr><td><a href="https://github.com/linkedin-developers/linkedin-api-python-client" target="_blank">linkedin-api-python-client</a></td><td><span class="stars">247</span></td><td>Официальный SDK от LinkedIn</td></tr>
+<tr><th>Инструмент</th><th>★</th><th>Тип</th><th>Описание</th><th>API ключ?</th></tr>
+<tr><td><a href="https://github.com/tweepy/tweepy">tweepy</a></td><td><span class="stars">11 149</span></td><td>API lib</td><td>Классика. Official API v2</td><td>Да (платный)</td></tr>
+<tr><td><a href="https://github.com/d60/twikit">twikit</a></td><td><span class="stars">4 190</span></td><td>Scraper</td><td>Internal API, бесплатный</td><td>Нет</td></tr>
+<tr><td><a href="https://github.com/adhikasp/mcp-twikit">mcp-twikit</a></td><td><span class="stars">229</span></td><td>MCP</td><td>Обёртка twikit для Claude Code</td><td>Нет</td></tr>
+<tr><td><a href="https://github.com/nirholas/XActions">XActions</a></td><td><span class="stars">133</span></td><td>Тулкит</td><td>Scraping + MCP + CLI + browser. Auto follow/like/comment</td><td>Нет</td></tr>
+<tr><td><a href="https://github.com/ihuzaifashoukat/twitter-automation-ai">twitter-automation-ai</a></td><td><span class="stars">110</span></td><td>Framework</td><td>Selenium + LLMs. Multi-account, content analysis</td><td>Нет</td></tr>
+<tr><td><a href="https://github.com/thedavecarroll/BluebirdPS">BluebirdPS</a></td><td><span class="stars">59</span></td><td>CLI</td><td>PowerShell автоматизация</td><td>Да</td></tr>
+<tr><td><a href="https://github.com/LuniaKunal/mcp-twitter">mcp-twitter</a></td><td><span class="stars">55</span></td><td>MCP</td><td>Twitter management через MCP</td><td>Да</td></tr>
+<tr><td><a href="https://github.com/MariyaSha/TwitterBot">TwitterBot</a></td><td><span class="stars">52</span></td><td>Bot</td><td>Автоматизация Twitter</td><td>Да</td></tr>
+<tr><td><a href="https://github.com/yasirfaizahmed/twitter_automation">twitter_automation</a></td><td><span class="stars">32</span></td><td>Framework</td><td>Без API, reverse-engineered</td><td>Нет</td></tr>
 </table>
 </div>
 
-<h3>Threads (Meta)</h3>
+<!-- ==================== LINKEDIN DEEP ==================== -->
+<h2>Детально: LinkedIn</h2>
+
 <div class="overflow-x">
 <table>
-<tr><th>Библиотека</th><th>Звёзды</th><th>Метод</th><th>Описание</th></tr>
-<tr><td><a href="https://github.com/junhoyeo/threads-api" target="_blank">junhoyeo/threads-api</a></td><td><span class="stars">1 611</span></td><td>Reverse-engineered</td><td>Node.js, неофициальный. Расширенные функции</td></tr>
-<tr><td><a href="https://github.com/fbsamples/threads_api" target="_blank">fbsamples/threads_api</a></td><td><span class="stars">278</span></td><td>Official API</td><td>Официальный пример от Meta</td></tr>
-<tr><td><a href="https://github.com/marclove/pythreads" target="_blank">pythreads</a></td><td>69</td><td>Official API</td><td>Python-обертка</td></tr>
+<tr><th>Инструмент</th><th>★</th><th>Тип</th><th>Описание</th></tr>
+<tr><td><a href="https://github.com/eracle/OpenOutreach">OpenOutreach</a></td><td><span class="stars">1 236</span></td><td>AI Leads</td><td>AI находит лиды на LinkedIn. Описываешь продукт - получаешь лидов</td></tr>
+<tr><td><a href="https://github.com/ozgur/python-linkedin">python-linkedin</a></td><td><span class="stars">912</span></td><td>API lib</td><td>Неофициальная, зрелая</td></tr>
+<tr><td><a href="https://github.com/linvo-io/linvo-scraper">linvo-scraper</a></td><td><span class="stars">626</span></td><td>Scraper</td><td>Полный скрапинг LinkedIn</td></tr>
+<tr><td><a href="https://github.com/linkedin-developers/linkedin-api-python-client">linkedin-api-python-client</a></td><td><span class="stars">247</span></td><td>API lib</td><td>Официальный SDK от LinkedIn</td></tr>
+<tr><td><a href="https://github.com/adhikasp/mcp-linkedin">mcp-linkedin</a></td><td><span class="stars">197</span></td><td>MCP</td><td>Фиды + постинг через Claude Code</td></tr>
+<tr><td><a href="https://github.com/OneInterface/mcp-linkedin-automtion">mcp-linkedin-automtion</a></td><td><span class="stars">68</span></td><td>MCP</td><td>LinkedIn автоматизация</td></tr>
+<tr><td><a href="https://github.com/alinaqi/mcp-linkedin-server">mcp-linkedin-server</a></td><td><span class="stars">53</span></td><td>MCP</td><td>Локальная автоматизация LinkedIn</td></tr>
+<tr><td><a href="https://github.com/joeygoesgrey/Linkedln-Automation-Framework">LinkedIn-Automation-Framework</a></td><td><span class="stars">19</span></td><td>Framework</td><td>Human-like Selenium: постинг, теги, медиа, AI engage loops</td></tr>
+<tr><td><a href="https://github.com/Linked-API/linkedin-skills">linkedin-skills</a></td><td><span class="stars">9</span></td><td>Skills</td><td>AI-агент скиллы: sales, social selling, data extraction</td></tr>
 </table>
 </div>
 
-<h3>Bluesky</h3>
+<!-- ==================== TELEGRAM DEEP ==================== -->
+<h2>Детально: Telegram</h2>
+
 <div class="overflow-x">
 <table>
-<tr><th>Библиотека</th><th>Звёзды</th><th>Описание</th></tr>
-<tr><td><a href="https://github.com/MarshalX/atproto" target="_blank">atproto</a></td><td><span class="stars">645</span></td><td>Полный Python SDK для Bluesky. AT Protocol. Бесплатный API</td></tr>
-<tr><td><a href="https://github.com/bluesky-social/cookbook" target="_blank">cookbook</a></td><td><span class="stars">227</span></td><td>Официальные примеры от Bluesky</td></tr>
+<tr><th>Инструмент</th><th>★</th><th>Тип</th><th>Протокол</th><th>Описание</th></tr>
+<tr><td><a href="https://github.com/python-telegram-bot/python-telegram-bot">python-telegram-bot</a></td><td><span class="stars">28 982</span></td><td>API lib</td><td>Bot API</td><td>Самая зрелая библиотека. Для ботов</td></tr>
+<tr><td><a href="https://github.com/LonamiWebs/Telethon">Telethon</a></td><td><span class="stars">11 915</span></td><td>API lib</td><td>MTProto</td><td>Клиентский API, полный доступ под личным аккаунтом</td></tr>
+<tr><td><a href="https://github.com/aiogram/aiogram">aiogram</a></td><td><span class="stars">5 632</span></td><td>Framework</td><td>Bot API</td><td>Async Python</td></tr>
+<tr><td><a href="https://github.com/dryeab/mcp-telegram">mcp-telegram</a></td><td><span class="stars">239</span></td><td>MCP</td><td>MTProto</td><td>send/edit/delete, search, drafts, media</td></tr>
+<tr><td><a href="https://github.com/leshchenko1979/fast-mcp-telegram">fast-mcp-telegram</a></td><td><span class="stars">31</span></td><td>MCP</td><td>MTProto</td><td>Raw MTProto, multi-user, Docker</td></tr>
+<tr><td><a href="https://github.com/EthanSky2986/mcp-telegram-claudecode">mcp-telegram-claudecode</a></td><td><span class="stars">6</span></td><td>MCP</td><td>Bot API</td><td>Под Claude Code: remote approval с телефона</td></tr>
 </table>
 </div>
 
-<h3>Mastodon</h3>
-<table>
-<tr><th>Библиотека</th><th>Звёзды</th><th>Описание</th></tr>
-<tr><td><a href="https://github.com/halcy/Mastodon.py" target="_blank">Mastodon.py</a></td><td><span class="stars">948</span></td><td>Стандартная Python-обертка. Любой инстанс. Бесплатный API</td></tr>
-</table>
+<!-- ==================== THREADS DEEP ==================== -->
+<h2>Детально: Threads</h2>
 
-<h3>Reddit</h3>
-<table>
-<tr><th>Библиотека</th><th>Звёзды</th><th>Описание</th></tr>
-<tr><td><a href="https://github.com/praw-dev/praw" target="_blank">PRAW</a></td><td><span class="stars">4 064</span></td><td>Стандарт Python + Reddit. Требует одобрение API</td></tr>
-</table>
-
-<h3>Telegram</h3>
 <div class="overflow-x">
 <table>
-<tr><th>Библиотека</th><th>Звёзды</th><th>Описание</th></tr>
-<tr><td><a href="https://github.com/python-telegram-bot/python-telegram-bot" target="_blank">python-telegram-bot</a></td><td><span class="stars">28 982</span></td><td>Самая зрелая Bot API библиотека</td></tr>
-<tr><td><a href="https://github.com/LonamiWebs/Telethon" target="_blank">Telethon</a></td><td><span class="stars">11 915</span></td><td>MTProto клиентский API (не бот), полный доступ</td></tr>
-<tr><td><a href="https://github.com/aiogram/aiogram" target="_blank">aiogram</a></td><td><span class="stars">5 632</span></td><td>Async Python фреймворк</td></tr>
+<tr><th>Инструмент</th><th>★</th><th>Тип</th><th>Метод</th><th>Описание</th></tr>
+<tr><td><a href="https://github.com/junhoyeo/threads-api">threads-api</a></td><td><span class="stars">1 611</span></td><td>API lib</td><td>Reverse-eng</td><td>Node.js, расширенные функции, Web UI в комплекте</td></tr>
+<tr><td><a href="https://github.com/fbsamples/threads_api">threads_api</a></td><td><span class="stars">278</span></td><td>API lib</td><td>Official</td><td>Официальный пример от Meta</td></tr>
+<tr><td><a href="https://github.com/marclove/pythreads">pythreads</a></td><td><span class="stars">69</span></td><td>API lib</td><td>Official</td><td>Python-обертка Meta API</td></tr>
+<tr><td><a href="https://github.com/iSarabjitDhiman/MetaThreads">MetaThreads</a></td><td><span class="stars">30</span></td><td>API lib</td><td>API</td><td>Python: треды, ответы, данные пользователей</td></tr>
+<tr><td><a href="https://github.com/linkfy/threadspy">threadspy</a></td><td><span class="stars">20</span></td><td>API lib</td><td>Unofficial</td><td>Python API</td></tr>
+<tr><td><a href="https://github.com/SvetimFM/threads-mcp-server">threads-mcp-server</a></td><td><span class="stars">2</span></td><td>MCP</td><td>Meta API</td><td>Dual account, analytics, thread chaining</td></tr>
 </table>
 </div>
 
-<h3>Substack</h3>
-<table>
-<tr><th>Библиотека</th><th>Звёзды</th><th>Описание</th></tr>
-<tr><td><a href="https://github.com/NHagar/substack_api" target="_blank">substack_api</a></td><td><span class="stars">179</span></td><td>Python, чтение + публикация. Неофициальный API</td></tr>
-<tr><td><a href="https://github.com/ma2za/python-substack" target="_blank">python-substack</a></td><td><span class="stars">142</span></td><td>Python, публикация</td></tr>
-</table>
+<div class="warn"><strong>Ограничение Threads API:</strong> Meta API поддерживает ТОЛЬКО постинг собственных тредов. Комментарии к чужим постам = ТОЛЬКО Playwright. Это критично для Reply Guy стратегии.</div>
 
-<h3>Блог-платформы (прямые API)</h3>
-<table>
-<tr><th>Платформа</th><th>Метод</th><th>Стоимость</th><th>Примечание</th></tr>
-<tr><td><strong>Dev.to</strong></td><td>REST API: <code>POST /api/articles</code></td><td>Бесплатно</td><td>API key в header. Самый простой вариант</td></tr>
-<tr><td><strong>Hashnode</strong></td><td>GraphQL: <code>POST gql.hashnode.com</code></td><td>Бесплатно</td><td>PAT token. Полный CRUD</td></tr>
-<tr><td><strong>TabNews</strong></td><td>REST API: <code>POST /api/v1/contents</code></td><td>Бесплатно</td><td>Session token (Cookie)</td></tr>
-<tr><td><strong>Medium</strong></td><td>API deprecated (2017)</td><td>-</td><td>Только Playwright. Скилл medium-editor уже есть</td></tr>
-<tr><td><strong>HN</strong></td><td>Нет API для постинга</td><td>-</td><td>Только Playwright</td></tr>
-</table>
+<!-- ==================== BLOGS & REST ==================== -->
+<h2>Блог-платформы: API и CLI</h2>
 
-<!-- Recommendation -->
-<h2>Рекомендуемая стратегия</h2>
+<div class="overflow-x">
+<table>
+<tr><th>Платформа</th><th>Метод</th><th>Стоимость</th><th>Лучший инструмент</th><th>Примечание</th></tr>
+<tr><td><strong>Dev.to</strong></td><td>REST API</td><td>Бесплатно</td><td><a href="https://github.com/sinedied/devto-cli">devto-cli</a> (44★) / curl</td><td>POST /api/articles. Самый простой</td></tr>
+<tr><td><strong>Hashnode</strong></td><td>GraphQL</td><td>Бесплатно</td><td><a href="https://github.com/Hashnode/hashnode-cli">hashnode-cli</a> (46★ official)</td><td>PAT token. Полный CRUD</td></tr>
+<tr><td><strong>TabNews</strong></td><td>REST API</td><td>Бесплатно</td><td><a href="https://github.com/miguel-l-b/tabnews.ts">tabnews.ts</a> (3★) / curl</td><td>Session token (Cookie)</td></tr>
+<tr><td><strong>Substack</strong></td><td>Reverse API</td><td>Бесплатно</td><td><a href="https://github.com/NHagar/substack_api">substack_api</a> (179★)</td><td>Неофициальный. Хрупкий</td></tr>
+<tr><td><strong>Medium</strong></td><td>API deprecated</td><td>-</td><td>Playwright MCP</td><td>SDK (349★) deprecated с 2017</td></tr>
+<tr><td><strong>Хабр</strong></td><td>API (ограничен)</td><td>-</td><td><a href="https://github.com/habralab/habrahabr_api">habrahabr_api</a> (89★) + Playwright</td><td>API чтение; публикация через Playwright</td></tr>
+<tr><td><strong>VC.ru</strong></td><td>Osnova API (WIP)</td><td>-</td><td><a href="https://github.com/tzurbaev/osnova-api">osnova-api</a> (1★) + Playwright</td><td>API недоработан; Playwright основной путь</td></tr>
+<tr><td><strong>HackerNoon</strong></td><td>Нет API</td><td>-</td><td>Ручная подача</td><td>Редактура + human review</td></tr>
+</table>
+</div>
+
+<!-- ==================== RECOMMENDATION ==================== -->
+<h2>Рекомендуемая стратегия подключения</h2>
 
 <div class="card">
-<h3>Tier 1: Postiz (покрывает всё)</h3>
-<p><strong>Postiz</strong> (27 611★) + postiz-agent CLI = один инструмент вместо десяти. Self-hosted Docker, 28+ платформ.</p>
+<h3>Tier 1: MCP-серверы (моментальная интеграция в Claude Code)</h3>
+<p>Подключить через <code>claude mcp add</code>, работает из CLI:</p>
+<ul>
+<li><strong>mcp-twikit</strong> (229★) - X без API ключа</li>
+<li><strong>mcp-linkedin</strong> (197★) - LinkedIn фиды + постинг</li>
+<li><strong>mcp-telegram</strong> (239★) - Telegram MTProto</li>
+<li><strong>jlcases/mcp-reddit</strong> (23★) - Reddit с записью!</li>
+<li><strong>crosspost MCP</strong> - 8 платформ одним сервером</li>
+</ul>
 
-<h3>Tier 2: MCP-серверы (для отдельных платформ)</h3>
-<p>mcp-twikit (X), mcp-linkedin, mcp-reddit, mcp-telegram - прямая интеграция в Claude Code.</p>
+<h3>Tier 2: Postiz (покрывает 30+ платформ)</h3>
+<p><strong>Postiz</strong> (27 500★) + postiz-agent CLI = один инструмент вместо десяти. Self-hosted Docker.</p>
 
-<h3>Tier 3: Прямые API (для блогов)</h3>
-<p>Dev.to REST, Hashnode GraphQL, Substack python-substack, TabNews REST - curl-вызовы.</p>
+<h3>Tier 3: Прямые API (блог-платформы)</h3>
+<p>Dev.to REST, Hashnode GraphQL, TabNews REST, Substack python-substack - curl-вызовы из скиллов.</p>
 
-<h3>Tier 4: Только Playwright</h3>
-<p>VC.ru, Хабр, Medium (редактирование), HN - нет другого способа.</p>
+<h3>Tier 4: Playwright (нет другого способа)</h3>
+<p>VC.ru, Хабр, Medium, HN, Threads (комменты) - существующие скиллы Playwright MCP.</p>
 </div>
 
 <h2>Бесплатные платформы с открытым API</h2>
-<p>Лучшие для автоматизации (минимум рисков):</p>
 <div class="card-grid">
-  <div class="metric green"><div class="num">Bluesky</div><div class="label">AT Protocol - полностью открытый, бесплатный</div></div>
-  <div class="metric green"><div class="num">Mastodon</div><div class="label">Открытый REST API, бесплатный</div></div>
-  <div class="metric green"><div class="num">Dev.to</div><div class="label">REST API, бесплатный ключ</div></div>
-  <div class="metric green"><div class="num">Hashnode</div><div class="label">GraphQL API, бесплатный</div></div>
-  <div class="metric green"><div class="num">Telegram</div><div class="label">Bot API, бесплатный</div></div>
-  <div class="metric"><div class="num">Reddit</div><div class="label">API бесплатный для умеренного использования</div></div>
+  <div class="metric green"><div class="num">Bluesky</div><div class="label">AT Protocol - полностью открытый. atproto Python 645★</div></div>
+  <div class="metric green"><div class="num">Mastodon</div><div class="label">REST API. Mastodon.py 948★. Любой инстанс</div></div>
+  <div class="metric green"><div class="num">Dev.to</div><div class="label">REST API. Бесплатный ключ. devto-cli 44★</div></div>
+  <div class="metric green"><div class="num">Hashnode</div><div class="label">GraphQL. Бесплатный PAT. hashnode-cli 46★</div></div>
+  <div class="metric green"><div class="num">Telegram</div><div class="label">Bot API бесплатный. MTProto для полного доступа</div></div>
+  <div class="metric"><div class="num">Reddit</div><div class="label">API бесплатный. PRAW 4064★ + MCP с записью</div></div>
 </div>
 
 </div>
